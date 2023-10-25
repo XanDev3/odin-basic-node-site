@@ -3,7 +3,9 @@ const fs = require('fs')
 // const url = require('url')
 const http = require('http')
 
-const folderPath = '/home/alex/odin-repos/odin-basic-node-site/pages'
+const folderPath = path.resolve('pages')
+console.log(folderPath)
+
 
 const indexPath = path.join(folderPath, 'index.html')
 const aboutPath = path.join(folderPath, 'about.html')
