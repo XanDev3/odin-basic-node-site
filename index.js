@@ -10,23 +10,35 @@ const aboutPath = path.join(folderPath, 'about.html')
 const contactPath = path.join(folderPath, 'contact-me.html')
 const notFoundPath = path.join(folderPath, '404.html')
 
-console.log(path.resolve('index.html'))
-console.log(aboutPath)
-console.log(folderPath)
-
 const server = http.createServer((req, res) => {
-  switch (req.url){
-    case '/' : {
-        res.end()
+  switch (req.url) {
+    case '/': {
+      fs.readFile(indexPath, (err, content) => {
+        if (err) throw err
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end(content)
+      })
     }
-    case '/about' : {
-
+    case '/about': {
+      fs.readFile(aboutPath, (err, content) => {
+        if (err) throw err
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end(content)
+      })
     }
-    case '/contact-me' : {
-
+    case '/contact-me': {
+      fs.readFile(contactPath, (err, content) => {
+        if (err) throw err
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end(content)
+      })
     }
-    default : {
-
+    default: {
+      fs.readFile(notFoundPath, (err, content) => {
+        if (err) throw err
+        res.writeHead(200, { 'Content-Type': 'text/html' })
+        res.end(content)
+      })
     }
   }
 })
