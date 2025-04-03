@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xandernesta/odin-basic-node-site.git"
+    "url": "git+https://github.com/xandev3/odin-basic-node-site.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/xandernesta/odin-basic-node-site/issues"
+    "url": "https://github.com/xandev3/odin-basic-node-site/issues"
   },
-  "homepage": "https://github.com/xandernesta/odin-basic-node-site#readme",
+  "homepage": "https://github.com/xandev3/odin-basic-node-site#readme",
   "dependencies": {
     "nodemon": "^3.0.1"
   }
